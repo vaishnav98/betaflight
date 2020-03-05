@@ -70,6 +70,8 @@
 #define USE_TIMER_MGMT
 #define USE_PERSISTENT_OBJECTS
 #define USE_CUSTOM_DEFAULTS_ADDRESS
+#define USE_RX_MSP
+#define USE_MSP_DISPLAYPORT
 // Re-enable this after 4.0 has been released, and remove the define from STM32F4DISCOVERY
 //#define USE_SPI_TRANSACTION
 
@@ -206,6 +208,7 @@
 #define USE_SERIALRX_SBUS       // Frsky and Futaba receivers
 #define USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
 #define USE_SERIALRX_SUMD       // Graupner Hott protocol
+#define USE_MSP_OVER_TELEMETRY
 
 #if (TARGET_FLASH_SIZE > 128)
 #define PID_PROFILE_COUNT 3
@@ -237,8 +240,6 @@
 
 #if ((TARGET_FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 12))
 #define USE_CMS
-#define USE_MSP_DISPLAYPORT
-#define USE_MSP_OVER_TELEMETRY
 #define USE_OSD_OVER_MSP_DISPLAYPORT
 #define USE_LED_STRIP
 #endif
@@ -315,7 +316,6 @@
 #define USE_BOARD_INFO
 #define USE_EXTENDED_CMS_MENUS
 #define USE_RTC_TIME
-#define USE_RX_MSP
 #define USE_ESC_SENSOR_INFO
 #define USE_CRSF_CMS_TELEMETRY
 #define USE_CRSF_LINK_STATISTICS
